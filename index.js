@@ -11,7 +11,8 @@ import nodeMailer from "nodemailer";
 const app = express();
 
 const PORT = 4000;
-const MONGO_URL = process.env.MONGO_DB_URL;
+const MONGO_URL = process.env.MONGO_URL;
+console.log(MONGO_URL);
 const client = new MongoClient(MONGO_URL);
 await client.connect();
 console.log("Mongo is connected");
